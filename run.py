@@ -31,6 +31,7 @@ def validate_data(values):
     Inside 'except', provides error feedback to user.
     """
     try:
+        [int(value) for value in values]
         if len(values) != 6:
             raise ValueError(
                 f'6 values expected, you provided {len(values)}'
